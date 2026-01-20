@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-darker {
+    @apply bg-white/5 backdrop-blur-md border border-white/15;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-sapphire to-sapphire_light hover:from-sapphire_light hover:to-sapphire;
+  }
+}

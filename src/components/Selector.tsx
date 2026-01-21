@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Zap } from 'lucide-react';
+import CardResults from './CardResults';
 
 interface SelectorState {
   creditScore: 'excellent' | 'good' | 'average' | 'fair';
@@ -35,6 +36,7 @@ export default function Selector() {
     categories: [],
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [showResults, setShowResults] = useState(false);
 
   const handleCategoryToggle = (category: string) => {
     setState((prev) => ({
@@ -56,14 +58,15 @@ export default function Selector() {
 
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsLoading(false);
-    alert('Analysis complete! Check the console for results.');
+    setShowResults(true);
   };
 
   const isValid =
     state.income && state.age && state.categories.length > 0;
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
+    <>
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-72 h-72 bg-sapphire_light/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-72 h-72 bg-sapphire/5 rounded-full blur-3xl"></div>
@@ -219,6 +222,12 @@ export default function Selector() {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+      </section>
+      <CardResults
+        isOpen={showResults}
+        onClose={() => setShowResults(false)}
+        selectedCategories={state.categories}
+      />
+    </>
   );
 }

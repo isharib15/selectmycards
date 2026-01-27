@@ -1,16 +1,7 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabaseClient';
-import { ArrowRight, X } from 'lucide-react';
-
-interface Card {
-  id: string;
-  card_name: string;
-  bank: string;
-  annual_fee: number;
-  best_for: string[];
-  image_url: string;
-}
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { ArrowRight, X } from "lucide-react";
+import type { CreditCard } from "@shared/schema";
 
 interface CardResultsProps {
   isOpen: boolean;
@@ -23,7 +14,7 @@ export default function CardResults({
   onClose,
   selectedCategories,
 }: CardResultsProps) {
-  const [cards, setCards] = useState<Card[]>([]);
+  const [cards, setCards] = useState<CreditCard[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,15 +22,19 @@ export default function CardResults({
 
     const fetchCards = async () => {
       setLoading(true);
-      const { data, error } = await supabase.from('credit_cards').select('*');
-
-      if (error) {
-        console.error('Error fetching cards:', error);
-      } else {
-        const filteredCards = (data || []).filter((card) =>
-          selectedCategories.some((cat) => card.best_for?.includes(cat))
+      try {
+        const response = await fetch("/api/credit-cards");
+        if (!response.ok) {
+          throw new Error("Failed to fetch cards");
+        }
+        const data = await response.json();
+        const filteredCards = (data || []).filter((card: CreditCard) =>
+          selectedCategories.some((cat) => card.bestFor?.includes(cat))
         );
         setCards(filteredCards.length > 0 ? filteredCards : data || []);
+      } catch (error) {
+        console.error("Error fetching cards:", error);
+        setCards([]);
       }
       setLoading(false);
     };
@@ -67,6 +62,7 @@ export default function CardResults({
       >
         <button
           onClick={onClose}
+          data-testid="button-close-results"
           className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
         >
           <X size={24} className="text-gray-400" />
@@ -81,7 +77,7 @@ export default function CardResults({
             Your Perfect Cards Match
           </h2>
           <p className="text-gray-400 mb-8">
-            Based on your {selectedCategories.join(', ')} spending habits
+            Based on your {selectedCategories.join(", ")} spending habits
           </p>
         </motion.div>
 
@@ -102,19 +98,20 @@ export default function CardResults({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
+                data-testid={`card-credit-${card.id}`}
                 className="group glass rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden bg-dark-950">
                   <motion.img
-                    src={card.image_url}
-                    alt={card.card_name}
+                    src={card.imageUrl || ""}
+                    alt={card.cardName}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
-                    {card.card_name}
+                    {card.cardName}
                   </h3>
 
                   <p className="text-sm text-sapphire_light font-medium mb-4">
@@ -122,18 +119,18 @@ export default function CardResults({
                   </p>
 
                   <div className="space-y-3 mb-6">
-                    <div className="flex justify-between items-center text-sm">
+                    <div className="flex justify-between items-center text-sm gap-2">
                       <span className="text-gray-400">Annual Fee</span>
                       <span className="text-white font-semibold">
-                        {card.annual_fee === 0 ? 'FREE' : `₹${card.annual_fee}`}
+                        {card.annualFee === 0 ? "FREE" : `₹${card.annualFee}`}
                       </span>
                     </div>
 
-                    {card.best_for && card.best_for.length > 0 && (
+                    {card.bestFor && card.bestFor.length > 0 && (
                       <div>
                         <p className="text-gray-400 text-sm mb-2">Best for</p>
                         <div className="flex flex-wrap gap-2">
-                          {card.best_for.map((category) => (
+                          {card.bestFor.map((category) => (
                             <span
                               key={category}
                               className="text-xs bg-sapphire/20 text-sapphire_light px-2 py-1 rounded"
@@ -149,6 +146,7 @@ export default function CardResults({
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    data-testid={`button-apply-${card.id}`}
                     className="w-full py-2 px-4 rounded-lg gold-gradient text-white font-semibold flex items-center justify-center gap-2 group/btn hover:shadow-lg hover:shadow-sapphire/50 transition-all duration-300"
                   >
                     Apply Now

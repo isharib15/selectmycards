@@ -1,30 +1,27 @@
-import { motion } from 'framer-motion';
-import { Lock, Brain, TrendingUp } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Lock, Brain, TrendingUp } from "lucide-react";
 
 const values = [
   {
     icon: Lock,
-    title: '100% Privacy (No Spam)',
-    description:
-      "We don't ask for personal details. Your data stays yours. No emails, no calls, no spam. Ever.",
+    title: "Tell us about you",
+    description: "Share basic details like your income bracket and credit score range.",
   },
   {
     icon: Brain,
-    title: 'Unbiased Algorithms',
-    description:
-      'Our recommendation engine uses machine learning to match cards based on your unique spending patterns, not commission.',
+    title: "Pick your lifestyle",
+    description: "Select where you spend the most—Shopping, Travel, Dining, or Fuel.",
   },
   {
     icon: TrendingUp,
-    title: 'Maximize ROI',
-    description:
-      'Discover cards that align with your lifestyle and unlock rewards you actually use every day.',
+    title: "Get Matched",
+    description: "Our engine instantly filters through dozens of cards to show you the ones you are actually eligible for.",
   },
 ];
 
 export default function ValueProposition() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
+    <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +31,10 @@ export default function ValueProposition() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-            Why Choose SelectMyCards?
+            How It Works
           </h2>
           <p className="text-gray-400 text-lg">
-            Built for cardholders who want smarter recommendations
+            Three simple steps to find your ideal card
           </p>
         </motion.div>
 
@@ -67,21 +64,6 @@ export default function ValueProposition() {
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 p-8 glass rounded-xl border-l-4 border-sapphire_light"
-        >
-          <p className="text-gray-300 text-center text-lg">
-            <span className="text-sapphire_light font-semibold">
-              Zero friction. Zero spam. Pure results.
-            </span>{' '}
-            Start your recommendation journey in under 2 minutes.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

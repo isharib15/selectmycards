@@ -49,13 +49,6 @@ export default function Selector() {
 
   const handleAnalyze = async () => {
     setIsLoading(true);
-    console.log('Analysis Data:', {
-      creditScore: state.creditScore,
-      annualIncome: state.income,
-      age: state.age,
-      topCategories: state.categories,
-    });
-
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsLoading(false);
     setShowResults(true);
@@ -66,163 +59,143 @@ export default function Selector() {
 
   return (
     <>
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-sapphire_light/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-sapphire/5 rounded-full blur-3xl"></div>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="glass rounded-2xl p-8 sm:p-12 space-y-8"
+      >
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-display font-bold text-white mb-2">
+            Your perfect match awaits
+          </h2>
+          <p className="text-gray-400">Answer just a few questions to get started</p>
+        </div>
 
-      <div className="max-w-2xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">
-              Your Perfect Match Awaits
-            </h2>
-            <p className="text-gray-400 text-lg">
-              Answer just a few questions about your financial profile
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass rounded-2xl p-8 sm:p-12 space-y-8"
-          >
-            {/* Credit Score Selection */}
-            <div className="space-y-4">
-              <label className="block text-white font-semibold text-lg">
-                Current Credit Score
-              </label>
-              <div className="grid grid-cols-2 gap-3">
-                {CREDIT_SCORE_OPTIONS.map((option) => (
-                  <motion.button
-                    key={option.value}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() =>
-                      setState((prev) => ({
-                        ...prev,
-                        creditScore: option.value as typeof state.creditScore,
-                      }))
-                    }
-                    className={`py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-                      state.creditScore === option.value
-                        ? 'gold-gradient text-white shadow-lg shadow-sapphire/50'
-                        : 'glass text-gray-300 hover:bg-white/15'
-                    }`}
-                  >
-                    {option.label}
-                  </motion.button>
-                ))}
-              </div>
-            </div>
-
-            {/* Annual Income */}
-            <div className="space-y-4">
-              <label className="block text-white font-semibold text-lg">
-                Annual Income
-              </label>
-              <div className="relative">
-                <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-semibold">
-                  $
-                </span>
-                <input
-                  type="number"
-                  value={state.income}
-                  onChange={(e) =>
-                    setState((prev) => ({ ...prev, income: e.target.value }))
-                  }
-                  placeholder="Enter annual income"
-                  className="w-full pl-8 pr-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
-                />
-              </div>
-            </div>
-
-            {/* Age */}
-            <div className="space-y-4">
-              <label className="block text-white font-semibold text-lg">
-                Age
-              </label>
-              <input
-                type="number"
-                value={state.age}
-                onChange={(e) =>
-                  setState((prev) => ({ ...prev, age: e.target.value }))
+        {/* Credit Score Selection */}
+        <div className="space-y-4">
+          <label className="block text-white font-semibold text-lg">
+            Current Credit Score
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            {CREDIT_SCORE_OPTIONS.map((option) => (
+              <motion.button
+                key={option.value}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() =>
+                  setState((prev) => ({
+                    ...prev,
+                    creditScore: option.value as typeof state.creditScore,
+                  }))
                 }
-                placeholder="Enter your age"
-                min="18"
-                max="120"
-                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
-              />
-            </div>
+                className={`py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
+                  state.creditScore === option.value
+                    ? 'gold-gradient text-white shadow-lg shadow-sapphire/50'
+                    : 'glass text-gray-300 hover:bg-white/15'
+                }`}
+              >
+                {option.label}
+              </motion.button>
+            ))}
+          </div>
+        </div>
 
-            {/* Spend Categories */}
-            <div className="space-y-4">
-              <label className="block text-white font-semibold text-lg">
-                Top Spend Categories
-              </label>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {SPEND_CATEGORIES.map((category) => (
-                  <motion.button
-                    key={category}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => handleCategoryToggle(category)}
-                    className={`py-2 px-3 rounded-lg font-medium text-sm transition-all duration-300 ${
-                      state.categories.includes(category)
-                        ? 'gold-gradient text-white shadow-lg shadow-sapphire/30'
-                        : 'glass text-gray-300 hover:bg-white/15'
-                    }`}
-                  >
-                    {category}
-                  </motion.button>
-                ))}
-              </div>
-              {state.categories.length === 0 && (
-                <p className="text-sm text-sapphire_light/70">Select at least one category</p>
-              )}
-            </div>
+        {/* Annual Income */}
+        <div className="space-y-4">
+          <label className="block text-white font-semibold text-lg">
+            Annual Income
+          </label>
+          <div className="relative">
+            <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-semibold">
+              $
+            </span>
+            <input
+              type="number"
+              value={state.income}
+              onChange={(e) =>
+                setState((prev) => ({ ...prev, income: e.target.value }))
+              }
+              placeholder="Enter annual income"
+              className="w-full pl-8 pr-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
+            />
+          </div>
+        </div>
 
-            {/* Analyze Button */}
-            <motion.button
-              whileHover={{ scale: isValid ? 1.02 : 1 }}
-              whileTap={{ scale: isValid ? 0.98 : 1 }}
-              onClick={handleAnalyze}
-              disabled={!isValid || isLoading}
-              className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
-                isValid
-                  ? 'gold-gradient text-white shadow-lg shadow-sapphire/50 cursor-pointer'
-                  : 'bg-gray-700 text-gray-500 cursor-not-allowed'
-              }`}
-            >
-              {isLoading ? (
-                <>
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                  >
-                    <Zap size={20} />
-                  </motion.div>
-                  Analyzing...
-                </>
-              ) : (
-                <>
-                  <Zap size={20} />
-                  Analyze & Find Cards
-                </>
-              )}
-            </motion.button>
-          </motion.div>
-        </motion.div>
-      </div>
-      </section>
+        {/* Age */}
+        <div className="space-y-4">
+          <label className="block text-white font-semibold text-lg">
+            Age
+          </label>
+          <input
+            type="number"
+            value={state.age}
+            onChange={(e) =>
+              setState((prev) => ({ ...prev, age: e.target.value }))
+            }
+            placeholder="Enter your age"
+            min="18"
+            max="120"
+            className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
+          />
+        </div>
+
+        {/* Spend Categories */}
+        <div className="space-y-4">
+          <label className="block text-white font-semibold text-lg">
+            Top Spend Categories
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {SPEND_CATEGORIES.map((category) => (
+              <motion.button
+                key={category}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => handleCategoryToggle(category)}
+                className={`py-2 px-3 rounded-lg font-medium text-sm transition-all duration-300 ${
+                  state.categories.includes(category)
+                    ? 'gold-gradient text-white shadow-lg shadow-sapphire/30'
+                    : 'glass text-gray-300 hover:bg-white/15'
+                }`}
+              >
+                {category}
+              </motion.button>
+            ))}
+          </div>
+        </div>
+
+        {/* Analyze Button */}
+        <motion.button
+          whileHover={{ scale: isValid ? 1.02 : 1 }}
+          whileTap={{ scale: isValid ? 0.98 : 1 }}
+          onClick={handleAnalyze}
+          disabled={!isValid || isLoading}
+          className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+            isValid
+              ? 'gold-gradient text-white shadow-lg shadow-sapphire/50 cursor-pointer'
+              : 'bg-gray-700 text-gray-500 cursor-not-allowed'
+          }`}
+        >
+          {isLoading ? (
+            <>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity }}
+              >
+                <Zap size={20} />
+              </motion.div>
+              Analyzing...
+            </>
+          ) : (
+            <>
+              <Zap size={20} />
+              Analyze & Find Cards
+            </>
+          )}
+        </motion.button>
+      </motion.div>
+
       <CardResults
         isOpen={showResults}
         onClose={() => setShowResults(false)}

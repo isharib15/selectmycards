@@ -1,0 +1,25 @@
+I have a specific UI restructuring plan and final content updates. Please execute these changes in a single pass.
+​PART 1: UI Cleanup & Layout Restructuring (Crucial)
+​Remove Clutter in Hero: In the main Hero section, delete the 'Premium Card Preview' box (the visual card display) and the 'Learn More' button.
+​Clean Up Buttons: Remove any standalone 'Analyze & Find Cards' buttons that are outside of the main input form.
+​Reposition Input Form: Locate the section titled 'Your perfect match awaits' (the one containing the Income/Score inputs). Move this entire component to the center of the Hero section, placing it immediately below the main headline and the 'No personal details required' text. It should be the main focal point of the page.
+​PART 2: Content Injection (Use Exact Text)
+​A. Update the 'About' Component:
+Replace the current 'About' text with this exact content:
+Headline: Decoding the Indian Credit Market, One Card at a Time.
+Body: SelectMyCards.com was built to simplify the complex world of personal finance. We are a dedicated credit card comparison platform designed to help you cut through the noise of hidden fees and banking jargon. Unlike traditional agents who push products for commissions, we are your unbiased guide to financial clarity.
+Our Mission: Whether you are a student looking for a student credit card with no income proof, a professional seeking premium travel credit cards, or a shopper hunting for the best cashback offers, our goal is simple: To match you with a card that fits your actual lifestyle—not just the one with the best ads.
+Why Choose Us:
+​Instant Eligibility Check: Our smart algorithm lets you check credit card eligibility online in seconds.
+​Compare Top Indian Banks: We aggregate data from India's leading financial institutions (HDFC, SBI, ICICI, Axis, IDFC, and more).
+​100% Privacy, Zero Spam: We do not save your personal details. Your income and score are processed instantly to find a match and then forgotten.
+​Transparent & Unbiased: We decode the fine print, from annual fee waivers to hidden interest rates.
+​B. Update 'How It Works' Section:
+Update the 3 steps to exactly this:
+​Tell us about you: Share basic details like your income bracket and credit score range.
+​Pick your lifestyle: Select where you spend the most—Shopping, Travel, Dining, or Fuel.
+​Get Matched: Our engine instantly filters through dozens of cards to show you the ones you are actually eligible for.
+​C. Update the Footer Component:
+Add this specific disclaimer text to the bottom of the Footer:
+'SelectMyCards.com is an informational platform and does not provide financial advice. Credit card approvals are at the sole discretion of the respective banks. No Guarantee: We do not guarantee approval for any financial product. Liability: SelectMyCards.com is not responsible for rejected applications or credit score impacts. Privacy: We do not save or sell user personal data.'
+​Goal: The homepage should now focus entirely on the Input Form, and the content should match the text above exactly.

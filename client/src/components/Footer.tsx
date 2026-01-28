@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { CreditCard } from 'lucide-react';
+import { motion } from "framer-motion";
+import { CreditCard } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -22,18 +22,13 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <a href="#how-it-works" className="hover:text-sapphire_light transition-colors duration-300">
                   How it Works
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <a href="#compare" className="hover:text-sapphire_light transition-colors duration-300">
                   Compare Cards
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
-                  Rewards Calculator
                 </a>
               </li>
             </ul>
@@ -43,18 +38,13 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <a href="#about" className="hover:text-sapphire_light transition-colors duration-300">
                   About
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
                   Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
-                  Contact
                 </a>
               </li>
             </ul>
@@ -73,11 +63,6 @@ export default function Footer() {
                   Terms of Service
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
-                  Disclaimer
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -89,7 +74,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="border-t border-white/10 pt-8 mt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 mb-8">
             <p>&copy; 2024 SelectMyCards. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
@@ -98,10 +83,13 @@ export default function Footer() {
               <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
                 LinkedIn
               </a>
-              <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
-                Instagram
-              </a>
             </div>
+          </div>
+          
+          <div className="text-center text-xs text-gray-500 leading-relaxed border-t border-white/5 pt-8">
+            <p>
+              'SelectMyCards.com is an informational platform and does not provide financial advice. Credit card approvals are at the sole discretion of the respective banks. No Guarantee: We do not guarantee approval for any financial product. Liability: SelectMyCards.com is not responsible for rejected applications or credit score impacts. Privacy: We do not save or sell user personal data.'
+            </p>
           </div>
         </motion.div>
       </div>

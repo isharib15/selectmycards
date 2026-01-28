@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Selector from "./components/Selector";
 import ValueProposition from "./components/ValueProposition";
 import Footer from "./components/Footer";
 import About from "./components/About";

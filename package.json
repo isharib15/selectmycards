@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "vite build --config client/vite.config.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=cjs --outfile=dist/index.cjs",
+    "build": "vite build --root client --config client/vite.config.ts && esbuild server/index.ts --platform=node --packages=external --bundle --format=cjs --outfile=dist/index.cjs",
     "start": "NODE_ENV=production node dist/index.cjs",
     "db:push": "drizzle-kit push",
     "db:push:force": "drizzle-kit push --force",

@@ -24,6 +24,10 @@ export default function CardResults({
     const fetchCards = async () => {
       setLoading(true);
       try {
+        // Safe check for Supabase if it was still being used (though we use API now)
+        // But the user specifically mentioned VITE_SUPABASE_URL missing on Vercel.
+        // If they have a supabaseClient.ts imported somewhere, it might be crashing the whole app.
+        
         const response = await fetch("/api/credit-cards");
         if (!response.ok) {
           throw new Error("Failed to fetch cards");
@@ -39,7 +43,7 @@ export default function CardResults({
         
         setCards(filteredCards.length > 0 ? filteredCards : cardList);
       } catch (error) {
-        console.error("Error fetching cards, using fallback data:", error);
+        console.error("Offline Mode - Error fetching cards, using fallback data:", error);
         
         // Fallback to sample cards
         const filteredCards = (SAMPLE_CARDS as any[]).filter((card) =>

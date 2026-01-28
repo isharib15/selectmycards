@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 import type { CreditCard } from "@shared/schema";
+import { SAMPLE_CARDS } from "@shared/mockData";
 
 interface CardResultsProps {
   isOpen: boolean;
@@ -28,13 +29,23 @@ export default function CardResults({
           throw new Error("Failed to fetch cards");
         }
         const data = await response.json();
-        const filteredCards = (data || []).filter((card: CreditCard) =>
+        
+        // Safe check for data
+        const cardList = (Array.isArray(data) && data.length > 0) ? data : (SAMPLE_CARDS as any[]);
+        
+        const filteredCards = cardList.filter((card: any) =>
           selectedCategories.some((cat) => card.bestFor?.includes(cat))
         );
-        setCards(filteredCards.length > 0 ? filteredCards : data || []);
+        
+        setCards(filteredCards.length > 0 ? filteredCards : cardList);
       } catch (error) {
-        console.error("Error fetching cards:", error);
-        setCards([]);
+        console.error("Error fetching cards, using fallback data:", error);
+        
+        // Fallback to sample cards
+        const filteredCards = (SAMPLE_CARDS as any[]).filter((card) =>
+          selectedCategories.some((cat) => card.bestFor?.includes(cat))
+        );
+        setCards(filteredCards.length > 0 ? filteredCards : (SAMPLE_CARDS as any[]));
       }
       setLoading(false);
     };

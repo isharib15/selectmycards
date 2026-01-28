@@ -1,0 +1,32 @@
+export const SAMPLE_CARDS = [
+  {
+    id: "sapphire-preferred",
+    cardName: "Sapphire Preferred",
+    bank: "Chase",
+    minSalary: 300000,
+    annualFee: 0,
+    bestFor: ["Travel", "Dining"],
+    creditScoreRequired: 700,
+    imageUrl: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+  },
+  {
+    id: "amex-gold",
+    cardName: "Amex Gold",
+    bank: "American Express",
+    minSalary: 500000,
+    annualFee: 2999,
+    bestFor: ["Dining", "Groceries"],
+    creditScoreRequired: 720,
+    imageUrl: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80",
+  },
+  {
+    id: "cash-back-plus",
+    cardName: "Cash Back Plus",
+    bank: "HDFC",
+    minSalary: 200000,
+    annualFee: 0,
+    bestFor: ["Shopping", "Fuel"],
+    creditScoreRequired: 650,
+    imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+  },
+];

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CreditCard } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -22,14 +23,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#how-it-works" className="hover:text-sapphire_light transition-colors duration-300">
+                <Link href="/#how-it-works" className="hover:text-sapphire_light transition-colors duration-300">
                   How it Works
-                </a>
-              </li>
-              <li>
-                <a href="#compare" className="hover:text-sapphire_light transition-colors duration-300">
-                  Compare Cards
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -54,14 +50,14 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <Link href="/legal" className="hover:text-sapphire_light transition-colors duration-300">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <Link href="/legal" className="hover:text-sapphire_light transition-colors duration-300">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

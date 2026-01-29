@@ -1,0 +1,43 @@
+"I need to refine the website layout, navigation, and add a Legal page with specific content.
+​1. Cleanup Navigation:
+​Remove the 'Find My Card' button from the top-right Navbar.
+​Remove the 'Compare' link from the Navbar.
+​Remove the 'Compare Cards' link from the Footer.
+​2. 'How It Works' Scroll:
+​Ensure the 'How It Works' section on the homepage has id='how-it-works'.
+​Update the 'How It Works' link in the Navbar to smoothly scroll to that ID on the homepage.
+​3. Create src/pages/Legal.tsx:
+​Create a new page component with two sections: Privacy Policy and Terms of Service.
+​Insert this EXACT content for Privacy Policy (do not summarize):
+'Heading 1: Privacy Policy
+Last Updated: January 2026
+At SelectMyCards.com, we believe your financial data belongs to you, we are "Privacy First."
+​Information We Collect
+We limit our data collection to the absolute minimum required to provide our service:
+Non-Personal Input Data: We collect data points such as your income bracket, credit score range, and spending categories (e.g., Shopping, Travel) to power our recommendation algorithm.
+No Contact Details Required: We do not ask for your name, phone number, or email address to generate card recommendations.
+Usage Data: Like most websites, we may use cookies or standard analytics to understand which pages are most popular.
+​How We Use Your Information
+To Recommend Cards: Your input data is processed instantly by our algorithm to filter credit cards that match your profile.
+To Improve Our Service: Aggregated, anonymous data helps us understand which cards are most popular among users.
+​Zero Spam Promise
+Since we do not collect your contact details, we cannot—and will never—spam you with calls, SMS, or emails. We do not sell your data to third-party telemarketers.
+​Third-Party Links
+Our website contains links to third-party websites (e.g., bank application pages). Once you leave our site, we are not responsible for the privacy practices of those third-party sites.'
+​Insert a visible Separator Line (<hr />)
+​Insert this EXACT content for Terms of Service (do not summarize):
+'Heading 2: Terms of Service
+​Acceptance of Terms
+By accessing SelectMyCards.com, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website.
+​Informational Purpose Only (Not Financial Advice)
+SelectMyCards.com is a financial literacy and comparison tool. We are not a bank, credit card issuer, or financial advisor & not SEBI registered.
+Accuracy: While we strive to keep interest rates, fees, and reward details accurate, banks change their terms frequently. We cannot guarantee that all information is 100% up-to-date at all times.
+Always Verify: You must verify the final terms and conditions on the official bank website before applying.
+​No Guarantee of Approval
+Our platform suggests cards you may be eligible for based on the data you provide. However, credit card approval is at the sole discretion of the issuing bank. SelectMyCards.com has no influence over approval decisions.
+​Limitation of Liability
+SelectMyCards.com shall not be liable for any damages or financial losses arising from your use of this website or your reliance on any information provided here.'
+​4. Routing & Linking:
+​Add a route for /legal in App.tsx.
+​Update 'Privacy Policy' and 'Terms of Service' links in the Footer to both point to the /legal page.
+​Goal: A clean homepage, scrollable navigation, and a single Legal page with the exact provided text."

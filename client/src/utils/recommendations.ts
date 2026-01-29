@@ -7,26 +7,26 @@ export interface UserProfile {
 }
 
 export function getRecommendations(userProfile: UserProfile, allCards: CreditCard[]): CreditCard[] {
-  const isEstablishedEarner = userProfile.income >= 500000;
+  // Part A: The 'Hard' Eligibility Filter (Bank Approval Rules)
+  const eligibleCards = allCards.filter(card => {
+    // Strict Score Check
+    const scoreCheck = card.minScore <= userProfile.creditScore;
+    // Strict Income Check
+    const incomeCheck = card.minIncome <= userProfile.income;
+    // Status Check: If user.income >= 500,000, REMOVE all cards where minIncome === 0
+    let statusCheck = true;
+    if (userProfile.income >= 500000 && card.minIncome === 0) {
+      statusCheck = false;
+    }
 
-  return allCards
-    .filter(card => {
-      // Strict Income Rule (Threshold)
-      const incomeMatch = userProfile.income >= card.minIncome;
-      // Strict Credit Score Rule
-      const scoreMatch = userProfile.creditScore >= card.minScore;
-      
-      // Relevance Filter:
-      // If established earner (>= 5L), remove student/secured cards (minIncome === 0)
-      if (isEstablishedEarner && card.minIncome === 0) {
-        return false;
-      }
+    return scoreCheck && incomeCheck && statusCheck;
+  });
 
-      return incomeMatch && scoreMatch;
-    })
+  // Part B: The 'Soft' Ranking System (User Preference)
+  return eligibleCards
     .map(card => {
-      // Weighted Scoring System
       let score = 0;
+      // Category Match: If card.tags matches a user's selected category, add +10 points
       userProfile.selectedCategories.forEach(category => {
         if (card.tags.includes(category)) {
           score += 10;
@@ -35,13 +35,12 @@ export function getRecommendations(userProfile: UserProfile, allCards: CreditCar
       return { ...card, score };
     })
     .sort((a: any, b: any) => {
-      // Smart Sorting
-      // Priority 1: Sort by score (Highest first)
+      // Final Sort:
+      // First by Score (Desc)
       if (b.score !== a.score) {
         return b.score - a.score;
       }
-      // Priority 2: If scores are tied, sort by minIncome (Highest first)
-      // Critical for high earners to see Premium cards first
+      // Then by minIncome (Desc)
       return b.minIncome - a.minIncome;
     });
 }

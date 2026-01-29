@@ -9,27 +9,29 @@ export interface UserProfile {
 export function getRecommendations(userProfile: UserProfile, allCards: CreditCard[]): CreditCard[] {
   return allCards
     .filter(card => {
-      // Strict Filtering
+      // Strict Income Rule (Threshold)
       const incomeMatch = userProfile.income >= card.minIncome;
+      // Also respect minScore if strictly requested (User mentioned score previously)
       const scoreMatch = userProfile.creditScore >= card.minScore;
       return incomeMatch && scoreMatch;
     })
     .map(card => {
-      // Scoring System
-      let matchScore = 0;
+      // Weighted Scoring System
+      let score = 0;
       userProfile.selectedCategories.forEach(category => {
         if (card.tags.includes(category)) {
-          matchScore += 10;
+          score += 10;
         }
       });
-      return { ...card, matchScore };
+      return { ...card, score };
     })
     .sort((a: any, b: any) => {
-      // Sorting: matchScore (Highest to Lowest)
-      if (b.matchScore !== a.matchScore) {
-        return b.matchScore - a.matchScore;
+      // Smart Sorting
+      // Priority 1: Sort by score (Highest first)
+      if (b.score !== a.score) {
+        return b.score - a.score;
       }
-      // If scores are tied, sort by annualFee (Lowest first)
-      return a.annualFee - b.annualFee;
+      // Priority 2: If scores are tied, sort by minIncome (Highest first)
+      return b.minIncome - a.minIncome;
     });
 }

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
-import { CreditCard, CARDS } from "../data/cards";
+import { CreditCard, allCards } from "../data/cards";
 import { getRecommendations } from "../utils/recommendations";
 
 interface CardResultsProps {
@@ -36,7 +36,7 @@ export default function CardResults({
           creditScore: userCreditScore, 
           selectedCategories 
         }, 
-        CARDS
+        allCards
       );
       
       setCards(recommendations);
@@ -129,12 +129,14 @@ export default function CardResults({
                     </div>
 
                     <div className="space-y-2">
-                       <p className="text-gray-400 text-sm">Key Features</p>
-                       <ul className="text-xs text-gray-300 space-y-1">
-                          {card.features.map((f, i) => (
-                            <li key={i}>• {f}</li>
-                          ))}
-                       </ul>
+                      <p className="text-gray-400 text-sm">Key Features</p>
+                      <ul className="text-sm space-y-1 mt-2">
+                        {card.features.map((feature, index) => (
+                          <li key={index} className="flex items-center text-gray-300">
+                            <span className="mr-2 text-green-400">✓</span> {feature}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
                     <div>

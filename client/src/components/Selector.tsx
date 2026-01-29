@@ -55,7 +55,7 @@ export default function Selector() {
   };
 
   const isValid =
-    state.income && state.age && state.categories.length > 0;
+    state.income && state.categories.length > 0;
 
   return (
     <>
@@ -71,6 +71,27 @@ export default function Selector() {
             Your perfect match awaits
           </h2>
           <p className="text-gray-400">Answer just a few questions to get started</p>
+        </div>
+
+        {/* Annual Income */}
+        <div className="space-y-4">
+          <label className="block text-white font-semibold text-lg">
+            Annual Income (Rupees)
+          </label>
+          <div className="relative">
+            <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-semibold">
+              ₹
+            </span>
+            <input
+              type="number"
+              value={state.income}
+              onChange={(e) =>
+                setState((prev) => ({ ...prev, income: e.target.value }))
+              }
+              placeholder="Enter annual income"
+              className="w-full pl-8 pr-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
+            />
+          </div>
         </div>
 
         {/* Credit Score Selection */}
@@ -100,45 +121,6 @@ export default function Selector() {
               </motion.button>
             ))}
           </div>
-        </div>
-
-        {/* Annual Income */}
-        <div className="space-y-4">
-          <label className="block text-white font-semibold text-lg">
-            Annual Income
-          </label>
-          <div className="relative">
-            <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-semibold">
-              $
-            </span>
-            <input
-              type="number"
-              value={state.income}
-              onChange={(e) =>
-                setState((prev) => ({ ...prev, income: e.target.value }))
-              }
-              placeholder="Enter annual income"
-              className="w-full pl-8 pr-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
-            />
-          </div>
-        </div>
-
-        {/* Age */}
-        <div className="space-y-4">
-          <label className="block text-white font-semibold text-lg">
-            Age
-          </label>
-          <input
-            type="number"
-            value={state.age}
-            onChange={(e) =>
-              setState((prev) => ({ ...prev, age: e.target.value }))
-            }
-            placeholder="Enter your age"
-            min="18"
-            max="120"
-            className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all duration-300 bg-white/5"
-          />
         </div>
 
         {/* Spend Categories */}
@@ -200,6 +182,8 @@ export default function Selector() {
         isOpen={showResults}
         onClose={() => setShowResults(false)}
         selectedCategories={state.categories}
+        userIncome={Number(state.income)}
+        userCreditScore={CREDIT_SCORE_OPTIONS.find(o => o.value === state.creditScore)?.min || 0}
       />
     </>
   );

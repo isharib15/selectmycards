@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
-import type { CreditCard } from "@shared/schema";
-import { SAMPLE_CARDS } from "@shared/mockData";
+import { CreditCard, CARDS } from "../data/cards";
+import { getRecommendations } from "../utils/recommendations";
 
 interface CardResultsProps {
   isOpen: boolean;
   onClose: () => void;
   selectedCategories: string[];
+  userIncome: number;
+  userCreditScore: number;
 }
 
 export default function CardResults({
   isOpen,
   onClose,
   selectedCategories,
+  userIncome,
+  userCreditScore,
 }: CardResultsProps) {
   const [cards, setCards] = useState<CreditCard[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,39 +27,24 @@ export default function CardResults({
 
     const fetchCards = async () => {
       setLoading(true);
-      try {
-        // Safe check for Supabase if it was still being used (though we use API now)
-        // But the user specifically mentioned VITE_SUPABASE_URL missing on Vercel.
-        // If they have a supabaseClient.ts imported somewhere, it might be crashing the whole app.
-        
-        const response = await fetch("/api/credit-cards");
-        if (!response.ok) {
-          throw new Error("Failed to fetch cards");
-        }
-        const data = await response.json();
-        
-        // Safe check for data
-        const cardList = (Array.isArray(data) && data.length > 0) ? data : (SAMPLE_CARDS as any[]);
-        
-        const filteredCards = cardList.filter((card: any) =>
-          selectedCategories.some((cat) => card.bestFor?.includes(cat))
-        );
-        
-        setCards(filteredCards.length > 0 ? filteredCards : cardList);
-      } catch (error) {
-        console.error("Offline Mode - Error fetching cards, using fallback data:", error);
-        
-        // Fallback to sample cards
-        const filteredCards = (SAMPLE_CARDS as any[]).filter((card) =>
-          selectedCategories.some((cat) => card.bestFor?.includes(cat))
-        );
-        setCards(filteredCards.length > 0 ? filteredCards : (SAMPLE_CARDS as any[]));
-      }
+      // Simulate recommendation engine processing
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      const recommendations = getRecommendations(
+        { 
+          income: userIncome, 
+          creditScore: userCreditScore, 
+          selectedCategories 
+        }, 
+        CARDS
+      );
+      
+      setCards(recommendations);
       setLoading(false);
     };
 
     fetchCards();
-  }, [isOpen, selectedCategories]);
+  }, [isOpen, selectedCategories, userIncome, userCreditScore]);
 
   if (!isOpen) return null;
 
@@ -117,16 +106,14 @@ export default function CardResults({
                 className="group glass rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden bg-dark-950">
-                  <motion.img
-                    src={card.imageUrl || ""}
-                    alt={card.cardName}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <motion.div className="w-full h-full bg-gradient-to-br from-sapphire/20 to-sapphire_light/10 flex items-center justify-center">
+                     <span className="text-sapphire_light font-bold text-xl">{card.bank}</span>
+                  </motion.div>
                 </div>
 
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
-                    {card.cardName}
+                    {card.name}
                   </h3>
 
                   <p className="text-sm text-sapphire_light font-medium mb-4">
@@ -141,21 +128,28 @@ export default function CardResults({
                       </span>
                     </div>
 
-                    {card.bestFor && card.bestFor.length > 0 && (
-                      <div>
-                        <p className="text-gray-400 text-sm mb-2">Best for</p>
-                        <div className="flex flex-wrap gap-2">
-                          {card.bestFor.map((category) => (
-                            <span
-                              key={category}
-                              className="text-xs bg-sapphire/20 text-sapphire_light px-2 py-1 rounded"
-                            >
-                              {category}
-                            </span>
+                    <div className="space-y-2">
+                       <p className="text-gray-400 text-sm">Key Features</p>
+                       <ul className="text-xs text-gray-300 space-y-1">
+                          {card.features.map((f, i) => (
+                            <li key={i}>• {f}</li>
                           ))}
-                        </div>
+                       </ul>
+                    </div>
+
+                    <div>
+                      <p className="text-gray-400 text-sm mb-2">Best for</p>
+                      <div className="flex flex-wrap gap-2">
+                        {card.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs bg-sapphire/20 text-sapphire_light px-2 py-1 rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
-                    )}
+                    </div>
                   </div>
 
                   <motion.button
@@ -182,7 +176,7 @@ export default function CardResults({
               No cards found for your selection.
             </p>
             <p className="text-gray-500 text-sm">
-              Try adjusting your spending categories.
+              Try adjusting your income or spending categories.
             </p>
           </div>
         )}

@@ -8,18 +8,20 @@ export interface UserProfile {
 
 export function getRecommendations(userProfile: UserProfile, allCards: CreditCard[]): CreditCard[] {
   // Part A: The 'Hard' Eligibility Filter (Bank Approval Rules)
+  const isEstablished = userProfile.income >= 500000 && userProfile.creditScore >= 700;
+
   const eligibleCards = allCards.filter(card => {
     // Strict Score Check
     const scoreCheck = card.minScore <= userProfile.creditScore;
     // Strict Income Check
     const incomeCheck = card.minIncome <= userProfile.income;
-    // Status Check: If user.income >= 500,000, REMOVE all cards where minIncome === 0
-    let statusCheck = true;
-    if (userProfile.income >= 500000 && card.minIncome === 0) {
-      statusCheck = false;
+    
+    // Status Check: Only hide 'Zero Income' cards if the user is truly established (High Income AND Good Score)
+    if (isEstablished && card.minIncome === 0) {
+      return false;
     }
 
-    return scoreCheck && incomeCheck && statusCheck;
+    return scoreCheck && incomeCheck;
   });
 
   // Part B: The 'Soft' Ranking System (User Preference)

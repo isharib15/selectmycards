@@ -68,7 +68,7 @@ export const allCards: CreditCard[] = [
   },
   {
     id: 'card-6',
-    name: "YES Bank FinFit Credit Card",
+    name: "Yes Bank Finbooster",
     bank: "YES",
     minIncome: 500000,
     minScore: 670,
@@ -163,17 +163,6 @@ export const allCards: CreditCard[] = [
     annualFee: 2500,
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹4L annual spend', '12 domestic + 6 international lounges; strong 5X partners and milestones'],
-    image: '/cards/placeholder.png',
-  },
-  {
-    id: 'card-15',
-    name: "Citi PremierMiles",
-    bank: "Citi",
-    minIncome: 600000,
-    minScore: 750,
-    annualFee: 3000,
-    tags: ['Shopping', 'Travel'],
-    features: ['Earn/transfer miles; multiple domestic lounge visits; good airline earn rates'],
     image: '/cards/placeholder.png',
   },
   {

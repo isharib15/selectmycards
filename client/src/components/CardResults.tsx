@@ -156,7 +156,10 @@ export default function CardResults({
                     </div>
                   </div>
 
-                  <motion.button
+                  <motion.a
+                    href={card.applyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     data-testid={`button-apply-${card.id}`}
@@ -167,7 +170,7 @@ export default function CardResults({
                       size={16}
                       className="group-hover/btn:translate-x-1 transition-transform duration-300"
                     />
-                  </motion.button>
+                  </motion.a>
                 </div>
               </motion.div>
             ))}

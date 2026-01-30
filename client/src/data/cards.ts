@@ -8,6 +8,7 @@ export interface CreditCard {
   tags: string[];
   features: string[];
   image: string;
+  applyLink: string;
 }
 
 export const allCards: CreditCard[] = [
@@ -21,6 +22,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Secured', 'zero-fee', '4× rewards'],
     image: '/cards/card-1.png',
+    applyLink: 'https://www.idfcfirstbank.com/credit-card/secure-card-standalone',
   },
   {
     id: 'card-2',
@@ -32,6 +34,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime-free', 'digital'],
     image: '/cards/card-2.png',
+    applyLink: 'https://www.paisabazaar.com/credit-card/step-up-credit-card/',
   },
   {
     id: 'card-3',
@@ -43,6 +46,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Easy FD-backed start', 'small FD ₹2k'],
     image: '/cards/card-3.png',
+    applyLink: 'https://www.kotak.com/en/personal-banking/cards/credit-cards/811-dream-different-credit-card.html',
   },
   {
     id: 'card-4',
@@ -54,6 +58,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Waived on ₹1L annual spend', 'Best low-fee online shopping rewards with 10X partner accelerators'],
     image: '/cards/card-4.png',
+    applyLink: 'https://www.sbicard.com/en/personal/credit-cards/shopping/simplyclick-sbi-card.page',
   },
   {
     id: 'card-5',
@@ -65,6 +70,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Often waived on bank offers', 'Simple starter card from HDFC with statement credit options'],
     image: '/cards/card-5.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/moneyback-plus',
   },
   {
     id: 'card-6',
@@ -76,6 +82,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF with credit fitness tools and good online reward multipliers'],
     image: '/cards/card-6.png',
+    applyLink: 'https://www.yesbank.in/personal-banking/cards/credit-cards/finbooster-credit-card',
   },
   {
     id: 'card-7',
@@ -87,6 +94,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Dining'],
     features: ['Waived on ₹2L annual spend', '5% on bill payments via GPay; 4% on Swiggy/Zomato/Ola'],
     image: '/cards/card-7.png',
+    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/axis-bank-ace-credit-card',
   },
   {
     id: 'card-8',
@@ -98,6 +106,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Waived on ₹2L annual spend', 'Simple 5% online cashback with broad coverage'],
     image: '/cards/card-8.png',
+    applyLink: 'https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.page',
   },
   {
     id: 'card-9',
@@ -109,6 +118,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹1L annual spend', '5% on popular merchants; includes domestic lounge visits'],
     image: '/cards/card-9.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card',
   },
   {
     id: 'card-10',
@@ -120,6 +130,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF; 5% for Prime on Amazon', '3% non‑Prime', '2% partners'],
     image: '/cards/card-10.png',
+    applyLink: 'https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card',
   },
   {
     id: 'card-11',
@@ -131,6 +142,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Dining'],
     features: ['No annual fee with decent rewards and dining offers'],
     image: '/cards/card-11.png',
+    applyLink: 'https://www.hsbc.co.in/credit-cards/products/visa-platinum/',
   },
   {
     id: 'card-12',
@@ -142,6 +154,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Promo/Liability based', 'Strong OTT/entertainment bundle; lifestyle discounts'],
     image: '/cards/card-12.png',
+    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/my-zone-credit-card',
   },
   {
     id: 'card-13',
@@ -153,6 +166,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Waived on ₹3.5L annual spend', '5% on Flipkart/Myntra; 1.5% elsewhere; lounge benefits'],
     image: '/cards/card-13.png',
+    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/flipkart-axis-bank-credit-card',
   },
   {
     id: 'card-14',
@@ -164,6 +178,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹4L annual spend', '12 domestic + 6 international lounges; strong 5X partners and milestones'],
     image: '/cards/card-14.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/regalia-gold-credit-card',
   },
   {
     id: 'card-16',
@@ -175,6 +190,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['50–100% waiver on ₹90k–₹1.5L', 'High MR value if monthly 4‑txn routine is followed; points don’t expire'],
     image: '/cards/card-16.png',
+    applyLink: 'https://www.americanexpress.com/in/credit-cards/membership-rewards-card/',
   },
   {
     id: 'card-17',
@@ -186,6 +202,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹10L annual spend', '3.33% base + 10× SmartBuy; unlimited lounges; 1:1 miles; 2% forex'],
     image: '/cards/card-17.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card',
   },
   {
     id: 'card-18',
@@ -197,6 +214,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹25L annual spend', 'Same product family; strong for big monthly spends and transfers'],
     image: '/cards/card-18.png',
+    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/magnus-credit-card',
   },
   {
     id: 'card-19',
@@ -208,6 +226,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Unlimited lounges + multiple hotel elite statuses; concierge‑led lifestyle'],
     image: '/cards/card-19.png',
+    applyLink: 'https://www.americanexpress.com/in/charge-cards/platinum-card/',
   },
   {
     id: 'card-20',
@@ -219,6 +238,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Ultimate lifestyle card with unmatched concierge and partnerships'],
     image: '/cards/card-20.png',
+    applyLink: 'https://www.americanexpress.com/in/content/centurion/',
   },
   {
     id: 'card-21',
@@ -230,6 +250,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹10L annual spend', 'Metal variant with same industry‑leading reward engine and lounges'],
     image: '/cards/card-21.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card',
   },
   {
     id: 'card-22',
@@ -241,5 +262,6 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹5L annual spend', '3.33% base + up to 10× SmartBuy; unlimited lounges via Diners; rich milestones'],
     image: '/cards/card-22.png',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/diners-club-black-metal-edition',
   },
 ];

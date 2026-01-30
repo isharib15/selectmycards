@@ -20,7 +20,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping'],
     features: ['Secured', 'zero-fee', '4× rewards'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-1.png',
   },
   {
     id: 'card-2',
@@ -31,7 +31,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping'],
     features: ['Lifetime-free', 'digital'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-2.png',
   },
   {
     id: 'card-3',
@@ -42,7 +42,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping'],
     features: ['Easy FD-backed start', 'small FD ₹2k'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-3.png',
   },
   {
     id: 'card-4',
@@ -53,7 +53,7 @@ export const allCards: CreditCard[] = [
     annualFee: 499,
     tags: ['Shopping'],
     features: ['Waived on ₹1L annual spend', 'Best low-fee online shopping rewards with 10X partner accelerators'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-4.png',
   },
   {
     id: 'card-5',
@@ -64,7 +64,7 @@ export const allCards: CreditCard[] = [
     annualFee: 500,
     tags: ['Shopping'],
     features: ['Often waived on bank offers', 'Simple starter card from HDFC with statement credit options'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-5.png',
   },
   {
     id: 'card-6',
@@ -75,7 +75,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF with credit fitness tools and good online reward multipliers'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-6.png',
   },
   {
     id: 'card-7',
@@ -86,7 +86,7 @@ export const allCards: CreditCard[] = [
     annualFee: 499,
     tags: ['Shopping', 'Dining'],
     features: ['Waived on ₹2L annual spend', '5% on bill payments via GPay; 4% on Swiggy/Zomato/Ola'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-7.png',
   },
   {
     id: 'card-8',
@@ -97,7 +97,7 @@ export const allCards: CreditCard[] = [
     annualFee: 999,
     tags: ['Shopping'],
     features: ['Waived on ₹2L annual spend', 'Simple 5% online cashback with broad coverage'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-8.png',
   },
   {
     id: 'card-9',
@@ -108,7 +108,7 @@ export const allCards: CreditCard[] = [
     annualFee: 1000,
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹1L annual spend', '5% on popular merchants; includes domestic lounge visits'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-9.png',
   },
   {
     id: 'card-10',
@@ -119,7 +119,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF; 5% for Prime on Amazon', '3% non‑Prime', '2% partners'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-10.png',
   },
   {
     id: 'card-11',
@@ -130,7 +130,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping', 'Dining'],
     features: ['No annual fee with decent rewards and dining offers'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-11.png',
   },
   {
     id: 'card-12',
@@ -141,7 +141,7 @@ export const allCards: CreditCard[] = [
     annualFee: 500,
     tags: ['Shopping'],
     features: ['Promo/Liability based', 'Strong OTT/entertainment bundle; lifestyle discounts'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-12.png',
   },
   {
     id: 'card-13',
@@ -152,7 +152,7 @@ export const allCards: CreditCard[] = [
     annualFee: 500,
     tags: ['Shopping'],
     features: ['Waived on ₹3.5L annual spend', '5% on Flipkart/Myntra; 1.5% elsewhere; lounge benefits'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-13.png',
   },
   {
     id: 'card-14',
@@ -163,7 +163,7 @@ export const allCards: CreditCard[] = [
     annualFee: 2500,
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹4L annual spend', '12 domestic + 6 international lounges; strong 5X partners and milestones'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-14.png',
   },
   {
     id: 'card-16',
@@ -174,7 +174,7 @@ export const allCards: CreditCard[] = [
     annualFee: 4500,
     tags: ['Shopping', 'Travel'],
     features: ['50–100% waiver on ₹90k–₹1.5L', 'High MR value if monthly 4‑txn routine is followed; points don’t expire'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-16.png',
   },
   {
     id: 'card-17',
@@ -185,7 +185,7 @@ export const allCards: CreditCard[] = [
     annualFee: 12500,
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹10L annual spend', '3.33% base + 10× SmartBuy; unlimited lounges; 1:1 miles; 2% forex'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-17.png',
   },
   {
     id: 'card-18',
@@ -196,7 +196,7 @@ export const allCards: CreditCard[] = [
     annualFee: 12500,
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹25L annual spend', 'Same product family; strong for big monthly spends and transfers'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-18.png',
   },
   {
     id: 'card-19',
@@ -207,7 +207,7 @@ export const allCards: CreditCard[] = [
     annualFee: 66000,
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Unlimited lounges + multiple hotel elite statuses; concierge‑led lifestyle'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-19.png',
   },
   {
     id: 'card-20',
@@ -218,7 +218,7 @@ export const allCards: CreditCard[] = [
     annualFee: 0,
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Ultimate lifestyle card with unmatched concierge and partnerships'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-20.png',
   },
   {
     id: 'card-21',
@@ -229,7 +229,7 @@ export const allCards: CreditCard[] = [
     annualFee: 12500,
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹10L annual spend', 'Metal variant with same industry‑leading reward engine and lounges'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-21.png',
   },
   {
     id: 'card-22',
@@ -240,6 +240,6 @@ export const allCards: CreditCard[] = [
     annualFee: 10000,
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹5L annual spend', '3.33% base + up to 10× SmartBuy; unlimited lounges via Diners; rich milestones'],
-    image: '/cards/placeholder.png',
+    image: '/cards/card-22.png',
   },
 ];

@@ -105,10 +105,12 @@ export default function CardResults({
                 data-testid={`card-credit-${card.id}`}
                 className="group glass rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300"
               >
-                <div className="aspect-video overflow-hidden bg-dark-950">
-                  <motion.div className="w-full h-full bg-gradient-to-br from-sapphire/20 to-sapphire_light/10 flex items-center justify-center">
-                     <span className="text-sapphire_light font-bold text-xl">{card.bank}</span>
-                  </motion.div>
+                <div className="aspect-video overflow-hidden bg-dark-950 flex items-center justify-center p-4">
+                  <img 
+                    src={card.image} 
+                    alt={card.name}
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
 
                 <div className="p-6">

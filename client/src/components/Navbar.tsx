@@ -44,9 +44,13 @@ export default function Navbar() {
           >
             How it Works
           </Link>
-          <a href="#about" className="text-gray-300 hover:text-sapphire_light transition-colors duration-300">
+          <Link 
+            href="/#about" 
+            onClick={(e) => handleScroll(e, "about")}
+            className="text-gray-300 hover:text-sapphire_light transition-colors duration-300"
+          >
             About
-          </a>
+          </Link>
         </div>
       </div>
     </motion.nav>

@@ -3,6 +3,18 @@ import { CreditCard } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (window.location.pathname !== "/") {
+      return; // Let default link behavior handle navigation to home
+    }
+    
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-dark-950 border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -23,7 +35,11 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/#how-it-works" className="hover:text-sapphire_light transition-colors duration-300">
+                <Link 
+                  href="/#how-it-works" 
+                  onClick={(e) => handleScroll(e, "how-it-works")}
+                  className="hover:text-sapphire_light transition-colors duration-300"
+                >
                   How it Works
                 </Link>
               </li>
@@ -34,19 +50,13 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a 
-                  href="#about" 
-                  onClick={(e) => {
-                    const element = document.getElementById('about');
-                    if (element) {
-                      e.preventDefault();
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <Link 
+                  href="/#about" 
+                  onClick={(e) => handleScroll(e, "about")}
                   className="hover:text-sapphire_light transition-colors duration-300"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-sapphire_light transition-colors duration-300">

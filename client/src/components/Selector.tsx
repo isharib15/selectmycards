@@ -20,12 +20,7 @@ const CREDIT_SCORE_OPTIONS = [
 const SPEND_CATEGORIES = [
   'Travel',
   'Dining',
-  'Groceries',
-  'Fuel',
   'Shopping',
-  'Entertainment',
-  'Business',
-  'Healthcare',
 ];
 
 export default function Selector() {

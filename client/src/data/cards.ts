@@ -22,7 +22,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Secured', 'zero-fee', '4× rewards'],
     image: '/cards/card-1.png',
-    applyLink: 'https://www.idfcfirstbank.com/credit-card/secure-card-standalone',
+    applyLink: 'https://www.idfcfirstbank.com/credit-card/idfc-first-wow-credit-card',
   },
   {
     id: 'card-2',
@@ -34,7 +34,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime-free', 'digital'],
     image: '/cards/card-2.png',
-    applyLink: 'https://www.paisabazaar.com/credit-card/step-up-credit-card/',
+    applyLink: 'https://www.sbmbank.co.in/smartbanking/step-up-credit-card.php',
   },
   {
     id: 'card-3',
@@ -82,7 +82,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF with credit fitness tools and good online reward multipliers'],
     image: '/cards/card-6.png',
-    applyLink: 'https://www.yesbank.in/personal-banking/cards/credit-cards/finbooster-credit-card',
+    applyLink: 'https://www.yesbank.in/personal-banking/cards/credit-cards',
   },
   {
     id: 'card-7',
@@ -202,7 +202,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel', 'Dining'],
     features: ['Waived on ₹10L annual spend', '3.33% base + 10× SmartBuy; unlimited lounges; 1:1 miles; 2% forex'],
     image: '/cards/card-17.png',
-    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card',
+    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards',
   },
   {
     id: 'card-18',

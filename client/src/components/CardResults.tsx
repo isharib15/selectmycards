@@ -105,11 +105,11 @@ export default function CardResults({
                 data-testid={`card-credit-${card.id}`}
                 className="group glass rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300"
               >
-                <div className="aspect-video overflow-hidden bg-dark-950 flex items-center justify-center p-4">
+                <div className="aspect-[1.586/1] overflow-hidden bg-dark-950 flex items-center justify-center p-4">
                   <img 
                     src={card.image} 
                     alt={card.name}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain aspect-[1.586/1]"
                   />
                 </div>
 
@@ -191,3 +191,4 @@ export default function CardResults({
     </div>
   );
 }
+// Last updated: Horizontal Images Fix

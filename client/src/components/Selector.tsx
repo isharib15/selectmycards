@@ -48,6 +48,14 @@ export default function Selector() {
   };
 
   const handleAnalyze = async () => {
+    // Track recommendation event
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'check_recommendation', {
+        'event_category': 'engagement',
+        'event_label': 'user_checked_cards'
+      });
+    }
+
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsLoading(false);

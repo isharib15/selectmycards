@@ -31,7 +31,7 @@ export default function Navbar() {
               <CreditCard size={24} className="text-white" />
             </div>
             <span className="text-2xl font-display font-bold text-white tracking-tight">
-              SelectMyCards
+              Select My Cards
             </span>
           </div>
         </Link>

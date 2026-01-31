@@ -23,7 +23,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen bg-dark-900 pt-32 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+    <section className="bg-dark-900 pt-32 pb-24 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
       <div className="max-w-5xl mx-auto text-center w-full mb-12">
         <motion.div
           variants={containerVariants}

@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="p-2 rounded-lg bg-gradient-sapphire">
                 <CreditCard size={20} className="text-white" />
               </div>
-              <span className="font-display font-bold text-white">SelectMyCards</span>
+              <span className="font-display font-bold text-white">Select My Cards</span>
             </div>
             <p className="text-gray-400 text-sm">
               Your personalized credit card recommendation engine.
@@ -34,7 +34,17 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#about" className="hover:text-sapphire_light transition-colors duration-300">
+                <a 
+                  href="#about" 
+                  onClick={(e) => {
+                    const element = document.getElementById('about');
+                    if (element) {
+                      e.preventDefault();
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="hover:text-sapphire_light transition-colors duration-300"
+                >
                   About
                 </a>
               </li>
@@ -71,11 +81,8 @@ export default function Footer() {
           className="border-t border-white/10 pt-8 mt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 mb-8">
-            <p>&copy; 2024 SelectMyCards. All rights reserved.</p>
+            <p>&copy; 2026 Select My Cards. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
-                Twitter
-              </a>
               <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
                 LinkedIn
               </a>

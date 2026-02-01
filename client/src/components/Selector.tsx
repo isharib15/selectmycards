@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Zap } from 'lucide-react';
 import CardResults from './CardResults';
 
@@ -32,6 +32,36 @@ export default function Selector() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const salary = params.get('salary');
+    const score = params.get('score');
+    const cats = params.get('cats');
+
+    if (salary || score || cats) {
+      const newState: Partial<SelectorState> = { ...state };
+      
+      if (salary) newState.income = salary;
+      
+      if (score) {
+        const scoreNum = Number(score);
+        const option = CREDIT_SCORE_OPTIONS.find(o => scoreNum >= o.min);
+        if (option) newState.creditScore = option.value as any;
+      }
+      
+      if (cats) {
+        newState.categories = cats.split(',').filter(c => SPEND_CATEGORIES.includes(c));
+      }
+
+      setState(prev => ({ ...prev, ...newState }));
+      
+      // Auto-trigger results if we have enough data
+      if (salary && cats) {
+        setShowResults(true);
+      }
+    }
+  }, []);
 
   const handleCategoryToggle = (category: string) => {
     setState((prev) => ({

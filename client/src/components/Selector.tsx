@@ -67,7 +67,7 @@ export default function Selector() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 sm:p-12 space-y-8"
+        className="backdrop-blur-xl bg-white/5 border border-white/20 shadow-2xl rounded-2xl p-8 sm:p-12 space-y-8"
       >
         <div className="text-center mb-8">
           <h2 className="text-3xl font-display font-bold text-white mb-2">

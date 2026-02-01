@@ -67,7 +67,7 @@ export default function Selector() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="glass rounded-2xl p-8 sm:p-12 space-y-8"
+        className="backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 sm:p-12 space-y-8"
       >
         <div className="text-center mb-8">
           <h2 className="text-3xl font-display font-bold text-white mb-2">
@@ -158,7 +158,7 @@ export default function Selector() {
           disabled={!isValid || isLoading}
           className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
             isValid
-              ? 'gold-gradient text-white shadow-lg shadow-sapphire/50 cursor-pointer'
+              ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-sapphire/50 cursor-pointer hover:from-amber-400 hover:to-orange-500'
               : 'bg-gray-700 text-gray-500 cursor-not-allowed'
           }`}
         >

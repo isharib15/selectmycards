@@ -15,7 +15,7 @@ export default function About() {
           </h2>
           <div className="prose prose-invert max-w-none">
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              SelectMyCards.com was built to simplify the complex world of personal finance. We are a dedicated credit card comparison platform designed to help you cut through the noise of hidden fees and banking jargon. Unlike traditional agents who push products for commissions, we are your unbiased guide to financial clarity.
+              SelectMyCards.com was built to simplify the complex world of personal finance. We are a dedicated credit card comparison platform designed to help you cut through the noise of hidden fees and banking jargon. Unlike traditional agents who push products for commissions, we are your unbiased guide to financial clarity. We analyze credit cards from India's leading financial institutions including HDFC Bank, SBI Card, Axis Bank, ICICI Bank, American Express, IDFC First Bank, HSBC, and others.
             </p>
             
             <div className="grid md:grid-cols-2 gap-12 mt-12">

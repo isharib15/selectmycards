@@ -101,7 +101,7 @@ export default function Footer() {
           
           <div className="text-center text-xs text-gray-500 leading-relaxed border-t border-white/5 pt-8">
             <p>
-              'SelectMyCards.com is an informational platform and does not provide financial advice. Credit card approvals are at the sole discretion of the respective banks. No Guarantee: We do not guarantee approval for any financial product. Liability: SelectMyCards.com is not responsible for rejected applications or credit score impacts. Privacy: We do not save or sell user personal data.'
+              'SelectMyCards.com is an informational platform and does not provide financial advice. Credit card approvals are at the sole discretion of the respective banks. No Guarantee: We do not guarantee approval for any financial product. Liability: SelectMyCards.com is not responsible for rejected applications or credit score impacts. Privacy: We do not save or sell user personal data. SelectMyCards is an independent recommendation platform and is not a bank or financial lender. All product names, logos, and brands are property of their respective owners. Use of these names is for identification purposes only and does not imply endorsement.'
             </p>
           </div>
         </motion.div>

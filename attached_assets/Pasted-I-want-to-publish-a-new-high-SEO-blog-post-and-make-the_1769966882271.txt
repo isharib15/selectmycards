@@ -1,0 +1,76 @@
+I want to publish a new, high-SEO blog post and make the "Blog" link visible again.
+
+Please perform these 2 steps:
+
+**Step 1: Update `client/src/data/blogPosts.ts`**
+Overwrite the file with this single, high-quality article:
+
+```typescript
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  content: string;
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: "lifetime-free-trap",
+    title: "Why 'Lifetime Free' Credit Cards Are Costing You ₹5,000 a Year",
+    excerpt: "Most Indians chase 'Lifetime Free' cards to save ₹500, but miss out on ₹5,000 in rewards. Here is the math that banks don't tell you.",
+    date: "February 2, 2026",
+    author: "SelectMyCards Team",
+    content: `
+      <p class="mb-4">The most searched term in Indian finance is <strong>"Lifetime Free Credit Card."</strong></p>
+      <p class="mb-4">It makes sense. Nobody likes paying fees. Why pay ₹1,000 a year to a bank when you can get a card for free?</p>
+      <p class="mb-6">But what if I told you that avoiding a ₹1,000 fee is actually costing you <strong>₹5,000 or more</strong> in lost profit every single year? This is the <strong>"Lifetime Free Trap,"</strong> and millions of Indians fall into it.</p>
+
+      <h2 class="text-2xl font-bold mb-4 text-slate-800">The Math: Free vs. Paid</h2>
+      <p class="mb-4">Let’s compare two hypothetical cards. This is the exact calculation our <strong>Credit Card Reward Calculator</strong> performs:</p>
+      
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li><strong>Card A (Lifetime Free):</strong> Gives 1% cashback. Annual Fee: ₹0.</li>
+        <li><strong>Card B (Paid):</strong> Gives 5% cashback. Annual Fee: ₹1,000.</li>
+      </ul>
+
+      <p class="mb-4">Most beginners pick Card A because it feels "safer." But let's run the numbers for a typical user spending <strong>₹20,000 per month</strong> (₹2.4 Lakhs/year).</p>
+
+      <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
+        <h3 class="font-bold text-lg mb-4">The Results (Yearly)</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <p class="font-semibold text-gray-600">Card A (Free)</p>
+            <p>Rewards: ₹2,400</p>
+            <p>Fee: -₹0</p>
+            <p class="font-bold text-red-600 mt-2">Net Profit: ₹2,400</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-600">Card B (Paid)</p>
+            <p>Rewards: ₹12,000</p>
+            <p>Fee: -₹1,000</p>
+            <p class="font-bold text-green-600 mt-2">Net Profit: ₹11,000</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-gray-500"><em>By "saving" ₹1,000 on the fee, you lost ₹8,600 in profit.</em></p>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-4 text-slate-800">So, Should You Always Buy a Paid Card?</h2>
+      <p class="mb-4"><strong>NO.</strong> This is where it gets tricky.</p>
+      <p class="mb-4">If your spending is lower—say, only ₹5,000 per month—the Paid Card might actually cause a loss because the fee will eat up all your rewards. In that case, the <strong>Lifetime Free Credit Card</strong> is actually the winner.</p>
+
+      <h2 class="text-2xl font-bold mb-4 text-slate-800">The Variables You Can't Guess</h2>
+      <p class="mb-4">Finding the <strong>Best Credit Card in India for 2026</strong> isn't about opinions. It depends on strict variables:</p>
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li><strong>Your Annual Salary:</strong> Affects eligibility for premium cards like HDFC Regalia or Axis Magnus.</li>
+        <li><strong>Your Spending Categories:</strong> Do you spend on Travel, Fuel, or Amazon/Flipkart?</li>
+        <li><strong>The Break-Even Point:</strong> The exact amount you need to spend to justify an Annual Fee.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mb-4 text-slate-800">Don't Do the Math in Your Head</h2>
+      <p class="mb-6">Stop guessing. We built a tool that compares the <strong>Annual Fees vs. Reward Rates</strong> of the top cards in India to find your specific "Net Profit."</p>
+      <p class="mb-2">Don't let a "Free" card cost you thousands.</p>
+    `
+  }
+];

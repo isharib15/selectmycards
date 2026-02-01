@@ -83,7 +83,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF with credit fitness tools and good online reward multipliers'],
     image: '/cards/card-6.png',
-    applyLink: 'https://www.yes.bank.in/personal-banking/yes-individual/cards/credit-cards/finbooster-card',
+    applyLink: 'https://yes.bank.in/personal-banking/yes-individual/cards/credit-cards',
   },
   {
     id: 'card-7',

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { CreditCard, allCards } from "../data/cards";
 import { getRecommendations } from "../utils/recommendations";
 
@@ -80,9 +81,27 @@ export default function CardResults({
           <h2 className="text-4xl font-display font-bold text-white mb-2">
             Your Perfect Cards Match
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400 mb-6">
             Based on your {selectedCategories.join(", ")} spending habits
           </p>
+
+          {!loading && cards.length > 0 && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const url = window.location.href;
+                const text = `I found some great credit cards for my profile! Check them out here: ${url}`;
+                window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+              }}
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-bold text-sm mb-8 transition-colors duration-300 shadow-lg shadow-green-500/20"
+            >
+              <FaWhatsapp size={20} />
+              Share these results on WhatsApp
+            </motion.button>
+          )}
         </motion.div>
 
         {loading ? (

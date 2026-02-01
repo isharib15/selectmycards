@@ -92,7 +92,12 @@ export default function CardResults({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                const url = window.location.href;
+                const params = new URLSearchParams();
+                params.set('salary', userIncome.toString());
+                params.set('score', userCreditScore.toString());
+                params.set('cats', selectedCategories.join(','));
+                
+                const url = `${window.location.origin}/?${params.toString()}`;
                 const text = `I found some great credit cards for my profile! Check them out here: ${url}`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
               }}

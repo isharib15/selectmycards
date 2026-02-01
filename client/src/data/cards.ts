@@ -9,6 +9,7 @@ export interface CreditCard {
   features: string[];
   image: string;
   applyLink: string;
+  badge?: string;
 }
 
 export const allCards: CreditCard[] = [
@@ -95,6 +96,7 @@ export const allCards: CreditCard[] = [
     features: ['Waived on ₹2L annual spend', '5% on bill payments via GPay; 4% on Swiggy/Zomato/Ola'],
     image: '/cards/card-7.png',
     applyLink: 'https://www.axisbank.com/retail/cards/credit-card/axis-bank-ace-credit-card',
+    badge: "Best for Offline",
   },
   {
     id: 'card-8',
@@ -107,6 +109,7 @@ export const allCards: CreditCard[] = [
     features: ['Waived on ₹2L annual spend', 'Simple 5% online cashback with broad coverage'],
     image: '/cards/card-8.png',
     applyLink: 'https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.page',
+    badge: "Best Seller",
   },
   {
     id: 'card-9',
@@ -119,6 +122,7 @@ export const allCards: CreditCard[] = [
     features: ['Waived on ₹1L annual spend', '5% on popular merchants; includes domestic lounge visits'],
     image: '/cards/card-9.png',
     applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card',
+    badge: "Cashback King",
   },
   {
     id: 'card-10',
@@ -131,6 +135,7 @@ export const allCards: CreditCard[] = [
     features: ['Lifetime free', 'LTF; 5% for Prime on Amazon', '3% non‑Prime', '2% partners'],
     image: '/cards/card-10.png',
     applyLink: 'https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card',
+    badge: "Lifetime Free",
   },
   {
     id: 'card-11',
@@ -179,6 +184,7 @@ export const allCards: CreditCard[] = [
     features: ['Waived on ₹4L annual spend', '12 domestic + 6 international lounges; strong 5X partners and milestones'],
     image: '/cards/card-14.png',
     applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/regalia-gold-credit-card',
+    badge: "Travel Favorite",
   },
   {
     id: 'card-16',

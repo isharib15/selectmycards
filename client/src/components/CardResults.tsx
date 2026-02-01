@@ -114,6 +114,15 @@ export default function CardResults({
                 </div>
 
                 <div className="p-6">
+                  {card.badge && (
+                    <div className={`w-fit rounded-full text-xs font-bold px-3 py-1 mb-2 ${
+                      card.badge === "Lifetime Free" 
+                        ? 'bg-green-100 text-green-800' 
+                        : 'bg-amber-100 text-amber-800'
+                    }`}>
+                      {card.badge}
+                    </div>
+                  )}
                   <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
                     {card.name}
                   </h3>

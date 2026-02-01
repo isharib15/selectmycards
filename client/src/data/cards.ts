@@ -23,7 +23,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Secured', 'zero-fee', '4× rewards'],
     image: '/cards/card-1.png',
-    applyLink: 'https://www.idfcfirstbank.com/credit-card/idfc-first-wow-credit-card',
+    applyLink: 'https://www.idfcfirst.bank.in/credit-card/wow',
   },
   {
     id: 'card-2',
@@ -35,7 +35,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime-free', 'digital'],
     image: '/cards/card-2.png',
-    applyLink: 'https://www.sbmbank.co.in/smartbanking/step-up-credit-card.php',
+    applyLink: 'https://www.sbm.bank.in/personal-banking/cards/secured-credit-card',
   },
   {
     id: 'card-3',
@@ -83,7 +83,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Lifetime free', 'LTF with credit fitness tools and good online reward multipliers'],
     image: '/cards/card-6.png',
-    applyLink: 'https://www.yesbank.in/personal-banking/cards/credit-cards',
+    applyLink: 'https://www.yes.bank.in/personal-banking/yes-individual/cards/credit-cards/finbooster-card',
   },
   {
     id: 'card-7',
@@ -108,7 +108,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Waived on ₹2L annual spend', 'Simple 5% online cashback with broad coverage'],
     image: '/cards/card-8.png',
-    applyLink: 'https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.page',
+    applyLink: 'https://www.sbicard.com/en/personal/credit-cards/rewards/cashback-sbi-card.page',
     badge: "Best Seller",
   },
   {
@@ -121,7 +121,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹1L annual spend', '5% on popular merchants; includes domestic lounge visits'],
     image: '/cards/card-9.png',
-    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card',
+    applyLink: 'https://www.hdfc.bank.in/credit-cards/millennia-credit-card',
     badge: "Cashback King",
   },
   {
@@ -171,7 +171,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping'],
     features: ['Waived on ₹3.5L annual spend', '5% on Flipkart/Myntra; 1.5% elsewhere; lounge benefits'],
     image: '/cards/card-13.png',
-    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/flipkart-axis-bank-credit-card',
+    applyLink: 'https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card',
   },
   {
     id: 'card-14',
@@ -183,7 +183,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹4L annual spend', '12 domestic + 6 international lounges; strong 5X partners and milestones'],
     image: '/cards/card-14.png',
-    applyLink: 'https://www.hdfcbank.com/personal/pay/cards/credit-cards/regalia-gold-credit-card',
+    applyLink: 'https://www.hdfc.bank.in/credit-cards/regalia-gold-credit-card',
     badge: "Travel Favorite",
   },
   {
@@ -220,7 +220,7 @@ export const allCards: CreditCard[] = [
     tags: ['Shopping', 'Travel'],
     features: ['Waived on ₹25L annual spend', 'Same product family; strong for big monthly spends and transfers'],
     image: '/cards/card-18.png',
-    applyLink: 'https://www.axisbank.com/retail/cards/credit-card/magnus-credit-card',
+    applyLink: 'https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card',
   },
   {
     id: 'card-19',

@@ -59,9 +59,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-sapphire_light transition-colors duration-300">
+                <Link 
+                  href="/blog" 
+                  className="hover:text-sapphire_light transition-colors duration-300"
+                >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

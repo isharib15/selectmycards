@@ -21,23 +21,20 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-6">At <strong>SelectMyCards</strong>, we took their expert opinions and ran them through our calculator to help you decide which recommendation suits your spending habits in 2026.</p>
 
       <h2 class="text-2xl font-bold mb-4 text-slate-800">What the Experts Say</h2>
-      
+
       <div class="mb-6">
         <h3 class="text-xl font-semibold text-slate-700">1. The Technical Deep-Dive: TechnoFino</h3>
-        <p class="mb-2">TechnoFino highlights the <strong>SBI Cashback Card</strong> for digital-first users. If you spend heavily online across many sites, the flat 5% is unbeatable.</p>
-        <a href="https://www.youtube.com/@TechnoFino" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm font-medium">Visit TechnoFino's Channel &rarr;</a>
+        <p class="mb-2">TechnoFino highlights the <strong>SBI Cashback Card</strong> for digital-first users. He argues that if you spend heavily online across many different sites, the flat 5% is unbeatable.</p>
       </div>
 
       <div class="mb-6">
         <h3 class="text-xl font-semibold text-slate-700">2. The Practical Approach: Card Academy</h3>
-        <p class="mb-2">Card Academy often prefers <strong>HDFC Millennia</strong> because it is easier to get "Lifetime Free" and offers great bank sale discounts.</p>
-        <a href="https://www.youtube.com/watch?v=csgH2lllkOo" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm font-medium">Watch their 2025 Guide &rarr;</a>
+        <p class="mb-2">Card Academy often prefers <strong>HDFC Millennia</strong> because it is easier to get "Lifetime Free" and offers great bank sale discounts during festivals.</p>
       </div>
 
       <div class="mb-8">
         <h3 class="text-xl font-semibold text-slate-700">3. The Lifestyle Pick: That Credit Card Guy</h3>
-        <p class="mb-2">Aly Hajiani lists <strong>SBI Cashback</strong> as a winner for simplicity. You spend money, you get money back. No complex points.</p>
-        <a href="https://www.youtube.com/watch?v=QJ2i-oHJf7g" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm font-medium">Watch his video &rarr;</a>
+        <p class="mb-2">Aly Hajiani lists <strong>SBI Cashback</strong> as a winner for simplicity. He appreciates that you don't need to track complicated reward points—you just get money back.</p>
       </div>
 
       <hr class="my-8 border-gray-200" />

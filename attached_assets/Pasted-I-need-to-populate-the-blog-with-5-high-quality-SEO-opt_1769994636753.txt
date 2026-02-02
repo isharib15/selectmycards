@@ -1,3 +1,10 @@
+I need to populate the blog with 5 high-quality, SEO-optimized articles in a single batch to complete the section.
+
+Please overwrite `client/src/data/blogPosts.ts` with the following code containing ALL 5 posts.
+
+**Step 1: Overwrite `client/src/data/blogPosts.ts`**
+
+```typescript
 export interface BlogPost {
   id: string;
   title: string;

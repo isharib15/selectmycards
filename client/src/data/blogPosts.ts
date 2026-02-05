@@ -114,4 +114,57 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-4">Don't be loyal to a bank. Be loyal to your wallet. <strong>Calculate your returns now.</strong></p>
     `
   }
+  ,
+  {
+    id: "lifetime-free-credit-cards-2026",
+    title: "Top 5 Lifetime Free Credit Cards in India (2026) – No Hidden Fees",
+    excerpt: "Stop paying annual fees. We ranked the best Lifetime Free (LTF) credit cards in India for students, beginners, and shopping lovers.",
+    date: "Feb 6, 2026",
+    author: "SelectMyCards Team",
+    content: `
+      <p class="mb-4">It is the most annoying feeling in personal finance: checking your credit card statement and seeing a <strong>₹500 + GST</strong> charge for a card you barely used.</p>
+
+      <p class="mb-4">For millions of Indians, the "Annual Fee" is the biggest barrier to getting a credit card. But what if you could earn rewards, get cashback, and build your credit score without ever paying a single rupee in joining or renewal fees?</p>
+
+      <p class="mb-4">This is the rise of the <strong>Lifetime Free (LTF) Credit Card</strong>. In 2026, these cards are more powerful than ever. We have analyzed the market to bring you the top no-annual-fee cards that are actually worth your wallet space.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">1. Amazon Pay ICICI Credit Card</h3>
+      <p class="mb-2"><strong>The Undisputed King of LTF Cards.</strong></p>
+      <p class="mb-4">If you shop on Amazon, this card is non-negotiable. It is strictly Lifetime Free—no spending criteria to waive fees, no hidden terms.</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-gray-300">
+        <li><strong>Benefit:</strong> Flat 5% Cashback for Prime members (3% for non-Prime) on Amazon.</li>
+        <li><strong>Why we love it:</strong> The cashback is real money (Amazon Pay Balance), not useless "reward points" that expire.</li>
+        <li><strong>Drawback:</strong> No lounge access and average rewards on offline spends (1%).</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">2. IDFC First Select Credit Card</h3>
+      <p class="mb-2"><strong>Best for Movies & Lifestyle.</strong></p>
+      <p class="mb-4">IDFC First Bank disrupted the market by offering most of their premium cards as Lifetime Free. The "Select" variant is a sweet spot for those with a salary above ₹25,000.</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-gray-300">
+        <li><strong>Benefit:</strong> Buy 1 Get 1 Free on movie tickets (via Paytm) up to ₹250.</li>
+        <li><strong>Hidden Gem:</strong> Interest-free cash withdrawal from ATMs for up to 48 days.</li>
+        <li><strong>Lounge Access:</strong> Yes! (4 domestic visits per quarter).</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">3. HDFC Freedom / MoneyBack+</h3>
+      <p class="mb-2"><strong>The Entry-Level Champion.</strong></p>
+      <p class="mb-4">While HDFC usually charges fees, they frequently offer the Freedom or MoneyBack+ cards as <strong>Lifetime Free</strong> to customers who have a bank account with them.</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-gray-300">
+        <li><strong>Benefit:</strong> 10X CashPoints on BigBasket, Swiggy, and BookMyShow.</li>
+        <li><strong>Verdict:</strong> Great for building your credit score if you are just starting your career.</li>
+      </ul>
+
+      <div class="bg-blue-900/30 p-6 rounded-xl border border-blue-500/30 my-8">
+        <h3 class="text-lg font-bold text-white mb-2">Wait! Is "Free" actually the best choice for you?</h3>
+        <p class="text-gray-300 mb-4">Sometimes, paying a small fee gets you massive returns. If you spend over ₹2 Lakhs a year, a paid card like the SBI Cashback might earn you ₹10,000 more than a free card.</p>
+        <p class="font-bold text-white mb-4">Don't guess. Check the math yourself.</p>
+        <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors inline-block">
+          Use Our Rewards Calculator &rarr;
+        </a>
+      </div>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-white">Conclusion</h3>
+      <p class="mb-4">If you are a student, a beginner, or just hate fees, the <strong>Amazon Pay ICICI</strong> is the safest bet in 2026. However, if you want lounge access, look at <strong>IDFC First</strong>.</p>
+    `
+  }
 ];

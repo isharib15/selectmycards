@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Selector from "./Selector";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, ChevronRight } from "lucide-react";
+
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },

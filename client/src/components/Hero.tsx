@@ -48,7 +48,7 @@ export default function Hero() {
             Stop guessing. Let our algorithm analyze your spending habits to
             maximize your rewards.{" "}
           </motion.p>
-          <div className="flex items-center gap-2 px-4 py-2 mt-4 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm w-fit mx-auto md:mx-0">
+          <div className="flex items-center gap-2 px-4 py-2 mt-4 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm w-fit mx-auto">
             <ShieldCheck className="w-4 h-4 text-green-400" />
             <span className="text-sm font-semibold text-green-100">
               No personal contact details required

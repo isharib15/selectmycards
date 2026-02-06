@@ -5,23 +5,29 @@ const values = [
   {
     icon: Lock,
     title: "Tell us about you",
-    description: "Share basic details like your income bracket and credit score range.",
+    description:
+      "Share basic details like your income bracket and credit score range.",
   },
   {
     icon: Brain,
     title: "Pick your lifestyle",
-    description: "Select where you spend the most—Shopping, Travel, Dining, or Fuel.",
+    description:
+      "Select where you spend the most—Shopping, Travel, Dining, or Fuel.",
   },
   {
     icon: TrendingUp,
     title: "Get Matched",
-    description: "  Our engine instantly filters through hundreds of cards to show you the ones best for you.",
+    description:
+      "  Our engine instantly filters through hundreds of cards to find the ones best for you.",
   },
 ];
 
 export default function ValueProposition() {
   return (
-    <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative">
+    <section
+      id="how-it-works"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-dark-900 relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

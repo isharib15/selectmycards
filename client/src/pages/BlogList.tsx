@@ -17,7 +17,7 @@ export default function BlogList() {
         </h1>
 
         <div className="space-y-12">
-          {[...blogPosts].reverse().map((post) => (
+          {[...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
       
             <motion.article
               key={post.id}

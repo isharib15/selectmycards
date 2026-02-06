@@ -93,6 +93,22 @@ export default function Footer() {
           viewport={{ once: true }}
           className="border-t border-white/10 pt-8 mt-8"
         >
+                    {/* Trust Signals */}
+          <div className="mb-6 flex flex-col gap-2">
+            <p className="text-gray-400 text-sm">
+              Last Data Update: <span className="text-green-400 font-bold">February 2026</span>
+            </p>
+            <p className="text-gray-500 text-xs">
+              Notice an error?{" "}
+              <a 
+                href="mailto:support@selectmycards.com?subject=Data Error Report" 
+                className="underline hover:text-white transition-colors"
+              >
+                Report it here
+              </a>
+            </p>
+          </div>
+          
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 mb-8">
             <p>&copy; 2026 Select My Cards. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">

@@ -167,4 +167,79 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-4">If you are a student, a beginner, or just hate fees, the <strong>Amazon Pay ICICI</strong> is the safest bet in 2026. However, if you want lounge access, look at <strong>IDFC First</strong>.</p>
     `
   }
+  ,
+{
+    id: "sbi-cashback-vs-hdfc-millennia-2026",
+    title: "The Great Debate: SBI Cashback vs. HDFC Millennia (2026 Comparison)",
+    excerpt: "The two most popular cards in India go head-to-head. We calculate exactly which one earns you more money based on your spending.",
+    date: "Feb 7, 2026",
+    author: "SelectMyCards Team",
+    content: `
+      <p class="mb-4">If you ask any expert to name the best online shopping card in India, they will name two cards: <strong>SBI Cashback</strong> and <strong>HDFC Millennia</strong>.</p>
+      <p class="mb-4">But you can't carry both. So, which one actually puts more money back in your pocket in 2026?</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">1. The Cashback Rate</h3>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-gray-300">
+        <li><strong>SBI Cashback:</strong> Flat 5% on almost ANY online merchant. (Amazon, Flipkart, Myntra, Zomato, etc.).</li>
+        <li><strong>HDFC Millennia:</strong> 5% only on specific partners (Amazon, Flipkart, BookMyShow, Swiggy, Zomato). Everything else is 1%.</li>
+        <li><strong>Winner:</strong> <span class="text-green-400">SBI Cashback</span> (because it covers more websites).</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">2. Lounge Access</h3>
+      <p class="mb-4">Here is the shocking part: <strong>The SBI Cashback card has NO lounge access.</strong> Zero.</p>
+      <p class="mb-4">HDFC Millennia, however, offers <strong>8 Domestic Lounge visits per year</strong> (if you spend ₹1 Lakh in a quarter).</p>
+      <p class="mb-4"><strong>Winner:</strong> <span class="text-green-400">HDFC Millennia</span>.</p>
+
+      <div class="bg-blue-900/30 p-6 rounded-xl border border-blue-500/30 my-8">
+        <h3 class="text-lg font-bold text-white mb-2">The Verdict?</h3>
+        <p class="text-gray-300 mb-4">If you travel even once a year, HDFC Millennia is the better balanced card. But if you are a pure online shopper who stays home, SBI Cashback will earn you roughly 20% more rewards.</p>
+        <p class="font-bold text-white mb-4">Not sure? Let the math decide.</p>
+        <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors inline-block">
+          Compare These Cards Now &rarr;
+        </a>
+      </div>
+    `
+  },
+  {
+    id: "best-lounge-access-credit-cards-india",
+    title: "Airport Lounge Access Guide 2026: The Cards That Actually Work",
+    excerpt: "Tired of getting rejected at the lounge entrance? Here is the list of debit and credit cards that guarantee entry in 2026.",
+    date: "Feb 8, 2026",
+    author: "SelectMyCards Team",
+    content: `
+      <p class="mb-4">There is nothing worse than standing in line at the airport lounge, handing over your card, and hearing the receptionist say: <em>"Sorry sir, this card is not accepted."</em></p>
+      <p class="mb-4">In 2026, banks have tightened the rules. Most entry-level cards now require you to spend ₹5,000 in the previous quarter to unlock lounge access. But some cards still offer it unconditionaly.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">1. AU Zenith+ (The Premium Choice)</h3>
+      <p class="mb-4">Offers unlimited domestic lounge access and a very low markup on international spends. It is a traveler's dream.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">2. IDFC First Wealth</h3>
+      <p class="mb-4">If you are an IDFC Wealth customer, this card is Lifetime Free and offers excellent lounge coverage (Domestic & International) for you and a companion.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">3. Scapia Federal Bank</h3>
+      <p class="mb-4">The new favorite for travelers. It offers unlimited domestic lounge access as long as you spend ₹5,000 a month. Plus, zero forex markup on international trips.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-white">Pro Tip: Check Before You Fly</h3>
+      <p class="mb-4">Always use the DreamFolks web access or the bank's official app to check if your card has valid visits left before you reach the airport.</p>
+    `
+  },
+  {
+    id: "how-to-increase-cibil-score-fast",
+    title: "750 to 800: How to Increase Your CIBIL Score Quickly",
+    excerpt: "Does checking your score lower it? Should you close old cards? We bust the myths and show you how to boost your credit score.",
+    date: "Feb 9, 2026",
+    author: "SelectMyCards Team",
+    content: `
+      <p class="mb-4">Your CIBIL score is the single most important number in your financial life. A score above 750 saves you lakhs in home loan interest. A score below 700 gets your credit card applications rejected.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">Myth #1: Checking your score lowers it.</h3>
+      <p class="mb-4"><strong>FALSE.</strong> When <em>you</em> check your score, it is a "Soft Inquiry." It does not hurt your score. When a <em>bank</em> checks it (after you apply for a loan), that is a "Hard Inquiry," and that <em>does</em> dip your score slightly.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">The 30% Rule</h3>
+      <p class="mb-4">This is the secret to a fast boost. Never use more than 30% of your credit limit. If your limit is ₹1 Lakh, do not spend more than ₹30,000. If you spend ₹90,000, banks see you as "credit hungry," and your score drops.</p>
+
+      <h3 class="text-xl font-bold mt-8 mb-2 text-blue-400">Don't Close Old Cards</h3>
+      <p class="mb-4">Your "Credit Age" matters. If you close your oldest credit card (even if you don't use it), your average credit history becomes shorter, and your score might fall. Keep it active and buy a coffee once a year.</p>
+    `
+  }
 ];

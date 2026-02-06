@@ -17,7 +17,8 @@ export default function BlogList() {
         </h1>
 
         <div className="space-y-12">
-          {blogPosts.map((post) => (
+          {[...blogPosts].reverse().map((post) => (
+      
             <motion.article
               key={post.id}
               initial={{ opacity: 0, y: 20 }}

@@ -15,7 +15,7 @@ const values = [
   {
     icon: TrendingUp,
     title: "Get Matched",
-    description: "Our engine instantly filters through dozens of cards to show you the ones you are actually eligible for.",
+    description: "  Our engine instantly filters through hundreds of cards to show you the ones best for you.",
   },
 ];
 

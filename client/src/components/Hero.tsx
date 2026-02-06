@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Selector from "./Selector";
-
+import { ShieldCheck } from "lucide-react";
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,8 +45,13 @@ export default function Hero() {
             className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             Stop guessing. Let our algorithm analyze your spending habits to maximize your rewards.{" "}
-            <span className="text-sapphire_light font-semibold">No personal contact details required.</span>
-          </motion.p>
+            <div className="flex items-center gap-2 px-4 py-2 mt-4 rounded-full bg-green-500/10 border border-green-500/20 backdrop-blur-sm w-fit mx-auto md:mx-0">
+              <ShieldCheck className="w-4 h-4 text-green-400" />
+              <span className="text-sm font-semibold text-green-100">
+                No personal contact details required
+              </span>
+            </div>
+          
         </motion.div>
       </div>
 
